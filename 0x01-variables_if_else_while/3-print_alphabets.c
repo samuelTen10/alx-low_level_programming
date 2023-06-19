@@ -5,8 +5,9 @@
  *
  * Description: lowercase alphabet
  *
- * Return: always 0 (success)
+ * Return: Always 0 (success)
 */
+
 int main(void)
 {
 	char ch = 'a';
@@ -19,7 +20,7 @@ int main(void)
 	}
 	while (CH <= 'Z')
 	{
-		putchar(ch);
+		putchar(CH);
 		CH++;
 	}
 	putchar('\n');

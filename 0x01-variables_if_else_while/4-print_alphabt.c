@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include<stdio.h>
 
 /**
  * main - Entry point
@@ -16,8 +16,8 @@ int main(void)
 	{
 		if (ch == 'e' || ch == 'q')
 			ch++;
-			putchar(ch);
-			ch++;
+		putchar(ch);
+		ch++;
 	}
 	putchar('\n');
 
