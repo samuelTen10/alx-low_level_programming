@@ -3,9 +3,9 @@
 /**
  * main - Entry point
  *
- * Description: print _putchar
+ * Description: print _putchar using putchar prototype
  *
- * return: 0 (success)
+ * Return: Always 0 (success)
 */
 
 int main(void);
