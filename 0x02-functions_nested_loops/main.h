@@ -3,7 +3,9 @@
 
 #include <stdio.h>
 
-int _putchar(char c)
+int putchar(char C)
+
+
 
 #endif 
 
