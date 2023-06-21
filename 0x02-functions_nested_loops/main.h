@@ -3,8 +3,8 @@
 
 #include <stdio.h>
 
-int putchar(char C)
 
+int _putchar(char c);
 
 
 #endif 
