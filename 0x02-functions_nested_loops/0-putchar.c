@@ -3,7 +3,7 @@
 /**
  * main - Entry point
  *
- * Description: print _putchar using putchar prototype
+ * Description: int  _putchar.c using putchar prototype
  *
  * Return: Always 0 (success)
 */
@@ -15,7 +15,7 @@ int main(void);
 
 	for (ch = 0; ch < 8; ch++)
 		_putchar(str[ch]);
-	_ptuchar('\n');
+	_putchar('\n');
 
 	return (0);
 }
