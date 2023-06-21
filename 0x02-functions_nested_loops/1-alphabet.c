@@ -5,7 +5,7 @@
  *
  * Description: print alphabet in lowercase
  *
- * return: 0 (success)
+ * Return: Always 0 (success)
 */
 
 void print_alphabet(void)
@@ -13,8 +13,6 @@ void print_alphabet(void)
 	int ch;
 
 	for (ch = 'a'; ch <= 'z'; ch++)
-		_ptuchar(ch);
+		_putchar(ch);
 	_putchar('\n');
-
-	return (0);
 }
