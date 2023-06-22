@@ -1,7 +1,7 @@
 #include"main.h"
 
 /**
- * jack_bauer - prints the minutes in a day
+ * jack_bauer- prints the minutes in a day
 */
 
 void jack_bauer(void)
