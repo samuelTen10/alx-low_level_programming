@@ -8,7 +8,7 @@
  * Return: Always 0 (Success)
 */
 
-void print_triangle(int size);
+void print_triangle(int size)
 {
 	int hght, base;
 
