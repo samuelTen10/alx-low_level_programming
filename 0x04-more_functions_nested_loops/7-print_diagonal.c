@@ -4,6 +4,8 @@
  * print_diagonal - print a diagonal line
  *
  * @n: is the number of times the char should be printed
+ *
+ * Return: Always 0
 */
 
 void print_diagonal(int n)
@@ -22,11 +24,4 @@ void print_diagonal(int n)
 			_putchar('\n');
 		}
 	}
-}
-
-
-
-
-
-
 }

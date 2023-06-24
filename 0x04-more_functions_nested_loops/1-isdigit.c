@@ -1,4 +1,4 @@
-#include ":main.h"
+#include "main.h"
 
 /**
  * _isdigit - checks if input is digit between 0 - 9
@@ -15,4 +15,3 @@ int _isdigit(int c)
 	else
 		return (0);
 }
-
