@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strncat - function used to concatenate a specified num of char
+ * _strncpy - stdlib function defined in the header
  *
  * @dest: pointer to the des input
  * @src: pointer to the source input
@@ -10,18 +10,18 @@
  * Return: #dest
 */
 
-char *_strncat(char *dest, char *src, int n)
+char *_strncpy(char *dest, char *src, int n)
 {
-	int c, i;
-
-	c = 0;
-
-	while (dest[c])
-		c++;
+	int i;
 
 	for (i = 0; i < n && src[i] != '\0'; i++)
-		dest[c + i] = scr[i];
-	dest[c + i] = '\0';
+		dest[i] = src[i];
+
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
 
 	return (dest);
 }
