@@ -8,7 +8,7 @@
  * Return: replaced string
 */
 
-char *rot13(char *)
+char *rot13(char *s)
 {
 	int i;
 
