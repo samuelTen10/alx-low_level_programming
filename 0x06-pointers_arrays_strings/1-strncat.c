@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * *_strncat - function used to concatenate a specified num of char
+ * _strncat - * function used to concatenate a specified num of char.
  *
  * @dest: pointer to the des input
  * @src: pointer to the source input
