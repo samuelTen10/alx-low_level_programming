@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * rot13 - replaces each letter in a string with the 13 postion
+ * rot13 - replaces each letters in a string with 13 postion ahead or behind
  *
  * @s: input string
  *
@@ -18,16 +18,15 @@ char *rot13(char *)
 
 	while (*s)
 	{
-		for (i = 0; i <= 52; i++)
+		for (i =0; i <= 52; i++)
 		{
 			if (*s == rot13[i])
 			{
-				*s = ROT13[i];
+				*s == ROT13[i];
 				break;
 			}
 		}
 		s++;
 	}
-
 	return (ptr);
 }
