@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-#include <ctype.h>
 
 /**
  * print_buffer - prints a buffer
@@ -42,6 +41,7 @@ void print_buffer(char *b, int size)
 		/**
 		 * Print content of the buffer
 		*/
+
 		for (int j = i; j < i + 10 && j < size; j++)
 		{
 			unsigned char c = b[j];
@@ -59,7 +59,7 @@ void print_buffer(char *b, int size)
 
 int main(void)
 {
-	char buffer[] = "This is a test buffer!";
+	char buffer[] = "This is a string!\0And this is the rest of the #buffer :)\1\2\3\4\5\6\7#cisfun\n\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\x20\x21\x34\x56#pointersarefun #infernumisfun\n";
 	int size = sizeof(buffer) - 1;
 	/**
 	 * Exclude the null terminator
