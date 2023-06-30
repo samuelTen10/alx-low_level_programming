@@ -1,64 +1,6 @@
 #include "main.h"
 #include <stdio.h>
-
-/**
- * isPrintableASCII - prints ASCII characters
- *
- * @n: input integer
- *
- * Return: 1 if true, 0 if false
-*/
-
-int isPrintableASCII(int n)
-{
-	return (n >= 32 && n <= 126);
-}
-
-/**
- * printHexes - prints hex value of elements
- *
- * @b: string to point
- * @start: initializing point
- * @end: ending point
-*/
-
-void printHexes(char *b, int start, int end)
-{
-	int i = 0;
-
-	while (i < 10)
-	{
-		if (i < end)
-			printf("%02x", *(b + start + i));
-		else
-			printf("  ");
-		if (i % 2)
-			printf("  ");
-		i++;
-	}
-}
-
-/**
- * printASCII - prints ASCII values and char
- *
- * @b: string to point
- * @start: starting point
- * @end: ending point
-*/
-
-void printASCII(char *b, int start, int end)
-{
-	int ch, i = 0;
-
-	while (i < end)
-	{
-		ch = *(b + i + start);
-		if (!isPrintableASCII(ch))
-			ch = 46;
-		printf("%c", ch);
-		i++;
-	}
-}
+#include <ctype.h>
 
 /**
  * print_buffer - prints a buffer
@@ -69,18 +11,61 @@ void printASCII(char *b, int start, int end)
 
 void print_buffer(char *b, int size)
 {
-	int start, end;
-
-	if (size > 0)
+	if (size <= 0)
 	{
-		for (start = 0; start < size; start += 10)
-		{
-			end = (size - start < 10) ? size - start : 10;
-			printf("%08x: ", start);
-			printHexes(b, start, end);
-			printASCII(b, start, end);
-			printf("\n");
-		}
-	} else
 		printf("\n");
+		return;
+	}
+
+	for (int i = 0; i < size; i += 10)
+	{
+		printf("%08x ", i);
+
+		/**
+		 * Print hexadecimal content
+		*/
+		for (int j = i; j < i + 10 && j < size; j++)
+		{
+			printf("%02x ", (unsigned char)b[j]);
+		}
+
+		/**
+		 * Fill any remaining space
+		*/
+		for (int j = i + size; j < i + 10; j++)
+		{
+			printf("   ");
+		}
+
+			printf(" ");
+
+		/**
+		 * Print content of the buffer
+		*/
+		for (int j = i; j < i + 10 && j < size; j++)
+		{
+			unsigned char c = b[j];
+			if (isprint(c))
+			{
+				printf("%c", c);
+			} else
+			{
+				printf(".");
+			}
+		}
+		printf("\n");
+	}
+}
+
+int main(void)
+{
+	char buffer[] = "This is a test buffer!";
+	int size = sizeof(buffer) - 1;
+	/**
+	 * Exclude the null terminator
+	*/
+
+	print_buffer(buffer, size);
+
+	return (0);
 }
