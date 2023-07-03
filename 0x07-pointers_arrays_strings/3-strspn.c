@@ -3,10 +3,10 @@
 /**
  * _strspn - calculates the length of int segment
  *
- * @s: input string
- * @accept: number of bytes
+ * @s: input string.
+ * @accept: number of bytes.
  *
- * Return: unsigned int
+ * Return: unsigned int.
 */
 
 unsigned int _strspn(char *s, char *accept)
@@ -15,7 +15,7 @@ unsigned int _strspn(char *s, char *accept)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; accept[j] != s[j]; j++)
+		for (j = 0; accept[j] != s[i]; j++)
 		{
 			if (accept[j] == '\0')
 				return (i);
