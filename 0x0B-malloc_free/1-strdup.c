@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
  * *_strdup - create a dynamically allocated copy of a string
