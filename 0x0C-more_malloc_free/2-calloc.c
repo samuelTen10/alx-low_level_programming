@@ -1,8 +1,10 @@
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
- * *_memset - fills the memory
+ * _memset - fills the memory
  *
  * @s: pointer
  * @b: constant
