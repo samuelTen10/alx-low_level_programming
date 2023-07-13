@@ -61,13 +61,14 @@ int _atoi(const char *s)
 
 void print_int(unsigned long int n)
 {
-	unsigned long int div = 1, i, resp;
+	unsigned long int divisor = 1, i, resp;
 
-	for (i = 0; n / div > 9; i++, div *= 10)
+	for (i = 0; n / divisor > 9; i++, divisor *= 10)
 		;
-	for (; div >= 1; n %= div, div /= 10)
+
+	for (; divisor >= 1; n %= divisor, divisor /= 10)
 	{
-		resp = n / div;
+		resp = n / divisor;
 		_putchar('0' + resp);
 	}
 }
