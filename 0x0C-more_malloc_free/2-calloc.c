@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -14,12 +13,12 @@
 
 char *_memset(char *s, char b, unsigned int n)
 {
-	char *i = s;
+	char *p = s;
 
 	while (n--)
 		*s++ = b;
 
-	return (i);
+	return (p);
 }
 
 /**
@@ -28,7 +27,7 @@ char *_memset(char *s, char b, unsigned int n)
  * @nmemb: array length
  * @size: size
  *
- * Return: pointer
+ * Return: Always 0.
 */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
