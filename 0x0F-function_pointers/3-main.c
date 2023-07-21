@@ -1,4 +1,5 @@
 #include "3-calc.h"
+#include <stdio.h>
 
 /**
  * main - checks the code
@@ -15,6 +16,7 @@ int main(int argc, char **argv)
 
 	if (argc != 4)
 		printf("Error\n"), exit(98);
+
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 
@@ -24,7 +26,7 @@ int main(int argc, char **argv)
 
 	if (!b && (argv[2][0] == '/' || argv[2][0] == '%'))
 		printf("Error\n"), exit(100);
-	printf("%d\n", op_func(a, b));
 
+	printf("%d\n", op_func(a, b));
 	return (0);
 }
