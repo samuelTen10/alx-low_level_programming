@@ -58,7 +58,7 @@ void format_string(char *separator, va_list ap)
 	switch ((int)(!str))
 		case 1:
 			str = "(nil)";
-	
+
 	printf("%s%s", separator, str);
 }
 
@@ -91,7 +91,7 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == tokens[j].token[0])
 			{
-				token[j].f(separator, ap);
+				tokens[j].f(separator, ap);
 				separator = ", ";
 			}
 			j++;
