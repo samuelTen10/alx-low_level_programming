@@ -1,4 +1,6 @@
 #include "function_pointers.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * array_iterator - maps arrays through function pointers
