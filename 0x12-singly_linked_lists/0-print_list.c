@@ -1,6 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 /**
  * _strlen - length of string
@@ -15,13 +13,9 @@ int _strlen(char *s)
 	int i = 0;
 
 	if (!s)
-	{
 		return (0);
-	}
 	while (*s++)
-	{
 		i++;
-	}
 
 	return (i);
 }
@@ -44,6 +38,5 @@ size_t print_list(const list_t *h)
 		h = h->next;
 		i++;
 	}
-
 	return (i);
 }
