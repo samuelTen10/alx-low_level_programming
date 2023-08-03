@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * flip_pits - returns the num of bits needed to flip to get
+ * flip_bits - returns the num of bits needed to flip to get
  *
  * @n: first number
  * @m: second number
