@@ -11,8 +11,8 @@
 /**
  * main - Entry point
  *
- * @av: argument VECTOR
- * @ac: argument COUNT
+ * @ac: argument count
+ * @av: argument vector
  *
  * Return: Always 0.
 */
@@ -26,26 +26,20 @@ int main(int ac, char **av)
 	if (ac != 3)
 		dprintf(STDERR_FILENO, USAGE), exit(97);
 	fileFrom = open(av[1], O_RDONLY);
-
 	if (fileFrom == -1)
 		dprintf(STDERR_FILENO, ERR_NOREAD, av[1]), exit(98);
 	fileTo = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, PERMISSIONS);
-
 	if (fileTo == -1)
 		dprintf(STDERR_FILENO, ERR_NOWRITE, av[2]), exit(99);
 
 	while ((n = read(fileFrom, buf, READ_BUF_SIZE)) > 0)
-	{
 		if (write(fileTo, buf, n) != n)
 			dprintf(STDERR_FILENO, ERR_NOWRITE, av[2]), exit(99);
-	}
-
 	if (n == -1)
 		dprintf(STDERR_FILENO, ERR_NOREAD, av[1]), exit(98);
 
 	fileFrom = close(fileFrom);
 	fileTo = close(fileTo);
-
 	if (fileFrom)
 		dprintf(STDERR_FILENO, ERR_NOCLOSE, fileFrom), exit(100);
 	if (fileTo)
