@@ -6,7 +6,7 @@
  * @n: number to be indexed
  * @index: index
  *
- * Return: Always (0)
+ * Return: Always 0.
 */
 
 int get_bit(unsigned long int n, unsigned int index)

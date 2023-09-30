@@ -1,12 +1,11 @@
 #include "main.h"
-#include <stdio.h>
 
 /*
  * print_binary - prints the binary representation of a number
  *
  * @n: number to be printed
  *
- * Return: Always (0)
+ * Return: Always 0.
 */
 
 void print_binary(unsigned long int n)
@@ -20,12 +19,9 @@ void print_binary(unsigned long int n)
 			_putchar('1');
 			prt++;
 		}
-
 		else if (prt)
 			_putchar('0');
 	}
 	if (!prt)
-	{
 		_putchar('0');
-	}
 }
