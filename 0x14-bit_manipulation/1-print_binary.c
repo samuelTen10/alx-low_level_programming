@@ -15,16 +15,14 @@ void print_binary(unsigned long int n)
 
 	while (bits)
 	{
-		if (n & (1L << bits))
+		if (n & (1L << --bits))
 		{
 			_putchar('1');
 			prt++;
-			bits--;
 		}
 		else if (prt)
 		{
 			_putchar('0');
-			bits--;
 		}
 	}
 	if (!prt)
